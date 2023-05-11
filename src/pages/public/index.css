@@ -17,7 +17,7 @@
   margin: 0 auto; 
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 1rem; 
 
   @media (min-width: 1024px) {
@@ -36,7 +36,7 @@
     font-weight: bold;
     font-size: 1.125rem; 
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
   > * + * {
     margin-left: 0.5rem;
@@ -68,12 +68,46 @@ label{
     border: 1px solid #848FAC; 
     border-radius: 0.25rem; 
     padding: 0.25rem 0.5rem; 
+
+
+    &:focus {
+        outline: none;
+        border-color: #848FAC;
+        box-shadow: none;
+      }
 }
 .input_invalid{
     border: 1px solid #EF4444; 
     border-radius: 0.25rem; 
     padding: 0.25rem 0.5rem; 
+
+    &:focus {
+        outline: none;
+        border-color: #EF4444;
+        box-shadow: none;
+      }
 }
+
+.password_input_container {
+    position: relative;
+    display: grid;
+    grid-auto-flow: column; 
+    justify-items: stretch;
+    align-items: center;
+  }
+  
+  .password_icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: #555;
+  }
+
 .signUp_content .error_message {
     color: #EF4444;
 }
@@ -161,6 +195,12 @@ label{
     padding: 0.25rem 0.5rem; 
     width: 30px;
     height: 30px;
+    
+    &:focus {
+        outline: none;
+        border-color: #848FAC;
+        box-shadow: none;
+      }
     
     @media (min-width: 425px) {
         width: 40px;

@@ -12,6 +12,7 @@ import { signIn , logIn} from '../../assets'
 import './index.css'
 //icons
 import { BsGoogle , BsFacebook } from "react-icons/bs";
+import { AiFillEye , AiFillEyeInvisible } from "react-icons/ai";
 interface FormValues {
   fullName: string,
   email: string ,
@@ -23,8 +24,10 @@ export const SignIn = () => {
   const auth = getAuth()
   const navigate = useNavigate();
 
+  const [passwordShown , setPasswordShown] = useState(false)
+
   const [err, setErr] = useState('')
-   
+
   const formik = useFormik({
     initialValues:{
         email:'',
@@ -97,14 +100,21 @@ export const SignIn = () => {
 
           <label>
             Password
+            <div className="password_input_container">
             <input 
-              type="password" 
+              type={passwordShown ? 'text' : 'password'} 
               name="password" 
               value={formik.values.password}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               placeholder="Enter Your Password here" 
-              className={formik.touched.password && formik.errors.password ? 'input_invalid' : 'input_valid'}/>
+              className={formik.touched.password && formik.errors.password ? 'input_invalid' : 'input_valid'}  
+              />
+              <div className="password_icon" onClick={()=>setPasswordShown(!passwordShown)}>
+                {!passwordShown && <AiFillEye />}
+                {passwordShown && <AiFillEyeInvisible />}
+              </div>
+            </div>
               {formik.touched.password && formik.errors.password && <p className="error_message">{formik.errors.password}</p>}
           </label>
 
