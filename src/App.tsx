@@ -18,8 +18,10 @@ const router = createBrowserRouter(
     <Route>
         <Route path="/" element={<SignIn />} />
         <Route path="signup" element={<SignUp />} />
-        <Route path="resetpassword" element={<ResetPassword />} />
-        <Route path="otpverification" element={<OtpVerification />} />
+        <Route path="resetpassword" >
+          <Route index element={<ResetPassword />} />
+          <Route path="otpverification/:email" element={<OtpVerification />} />
+        </Route>
         <Route path="/" element={<AuthRoute > <TopNav /> </AuthRoute> } >
           <Route path="dashboard" element={<DashBoard />} />
           <Route path="appointments" element={<Appointments />} />
