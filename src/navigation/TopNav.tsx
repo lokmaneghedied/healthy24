@@ -22,7 +22,7 @@ export const TopNav = () => {
   const title = location.pathname.substr(1)
   
   useEffect(()=>{
-    if(title === 'Profile'){
+    if(title === 'EditProfile'){
       setInProfile(true)
       setToggleSideNav(false)
     }else{
@@ -45,7 +45,7 @@ export const TopNav = () => {
       
       <div className="top-nav-responsive">
         {!inProfile && <AiOutlineMenu onClick={()=>{setToggleSideNav(true)}} className="icon-responsive" />}
-        {inProfile && <NavLink to='/Dashboard'>
+        {inProfile && <NavLink to='/Profile'>
               <IoMdArrowBack className="icon-responsive"/>
         </NavLink>}
         <h1 className="top-nav-title">{title}</h1>

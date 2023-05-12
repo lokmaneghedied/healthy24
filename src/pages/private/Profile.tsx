@@ -1,5 +1,14 @@
 export const Profile = () => {
   return (
-    <div>Profile</div>
+    <section>
+      {/* PROFILE */}
+      <div>
+
+      </div>
+      {/* DESCRIPTION */}
+      <div>
+        
+      </div>
+    </section>
   )
 }
