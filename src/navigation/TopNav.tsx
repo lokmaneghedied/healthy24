@@ -2,10 +2,10 @@
 import { NavLink } from "react-router-dom";
 //hooks
 import { useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState , useEffect } from "react";
 //icons
 import { AiOutlineMenu , AiOutlineMenuUnfold } from "react-icons/ai";
-import { IoMdNotificationsOutline  } from "react-icons/io";
+import { IoMdNotificationsOutline , IoMdArrowBack } from "react-icons/io";
 import { CiSettings } from "react-icons/ci";
 //assets
 import { logo , doctorAvatar } from '../assets'
@@ -15,11 +15,21 @@ import { navLinks } from "../constants"
 export const TopNav = () => {
   
   const [toggleSidenav , setToggleSideNav] = useState(false)
+  const [inProfile , setInProfile] = useState(false)
 
   const location = useLocation();
   
   const title = location.pathname.substr(1)
-      
+  
+  useEffect(()=>{
+    if(title === 'Profile'){
+      setInProfile(true)
+      setToggleSideNav(false)
+    }else{
+      setInProfile(false)
+    }
+  },[title])
+
   return (
     <section>
       <div className="top-nav ">
@@ -34,7 +44,10 @@ export const TopNav = () => {
       </div>
       
       <div className="top-nav-responsive">
-        <AiOutlineMenu onClick={()=>{setToggleSideNav(true)}} className="icon-responsive" />
+        {!inProfile && <AiOutlineMenu onClick={()=>{setToggleSideNav(true)}} className="icon-responsive" />}
+        {inProfile && <NavLink to='/Dashboard'>
+              <IoMdArrowBack className="icon-responsive"/>
+        </NavLink>}
         <h1 className="top-nav-title">{title}</h1>
         <IoMdNotificationsOutline className="icon-responsive" />
 

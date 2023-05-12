@@ -7,6 +7,7 @@
     padding-right: 0.5rem;
     border-color: #dfe8f6;
     display: none;
+    width:300px;
 
     @media (min-width: 1024px) {
     display: block;
@@ -76,7 +77,7 @@
 }
 
 .side-nav{
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     background-color: #ffffff;
@@ -90,6 +91,7 @@
     -webkit-box-shadow: 26.5px 0 17.5px 0 #eaeaea;
     -moz-box-shadow: 26.5px 0 17.5px 0 #eaeaea;
     box-shadow: 26.5px 0 17.5px 0 #eaeaea;
+    height:100vh;
 }
 
 .side-nav-header{
