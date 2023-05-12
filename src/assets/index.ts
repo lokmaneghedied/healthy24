@@ -11,6 +11,13 @@ import patient4 from './patient4.png'
 import patient5 from './patient5.png'
 import patient6 from './patient6.png'
 import patient7 from './patient7.png'
+import appointments from './appointments.png'
+import dashboard from './dashboard.png'
+import medicalHistory from './medicalHistory.png'
+import messages from './messages.png'
+import patients from './patients.png'
+import cover from './cover.png'
+import logo from './logo.png'
 
 export {
     hand,
@@ -19,6 +26,13 @@ export {
     signIn,
     otpVerif,
     resetPassword,
+    appointments,
+    dashboard,
+    medicalHistory,
+    messages,
+    cover,
+    logo,
+    patients,
     patient1,
     patient2,
     patient3,

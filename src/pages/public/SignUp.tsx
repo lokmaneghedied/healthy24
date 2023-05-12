@@ -66,7 +66,7 @@ export const SignUp = () => {
           }).then((res)=>{
             if(res.ok){
                 setErr('')
-                navigate('/dashboard')
+                navigate('/Dashboard')
             }else{
               setErr('something went wrong, please try again')
             }

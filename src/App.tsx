@@ -6,9 +6,8 @@ import  AuthRoute from "./config/AuthRoute";
 //Public_Pages
 import { SignIn , SignUp , ResetPassword , OtpVerification , NotFound } from "./pages/public";
 //Private_Pages
-import { DashBoard , Appointments , Profile , Patients , MedicalHistory } from "./pages/private";
-//layouts
-import { TopNav } from "./navigation";
+import { Home, DashBoard , Appointments , Profile , Patients , MedicalHistory } from "./pages/private";
+
 
 
 initializeApp(config.firebaseConfig)
@@ -22,12 +21,12 @@ const router = createBrowserRouter(
           <Route index element={<ResetPassword />} />
           <Route path="otpverification/:email" element={<OtpVerification />} />
         </Route>
-        <Route path="/" element={<AuthRoute > <TopNav /> </AuthRoute> } >
-          <Route path="dashboard" element={<DashBoard />} />
-          <Route path="appointments" element={<Appointments />} />
-          <Route path="profile" element={<Profile />} />
-          <Route path="patients" element={<Patients />} />
-          <Route path="medicalhistory" element={<MedicalHistory />} />
+        <Route path="/" element={<AuthRoute > <Home /> </AuthRoute> } >
+          <Route path="Dashboard" element={<DashBoard />} />
+          <Route path="Appointments" element={<Appointments />} />
+          <Route path="Profile" element={<Profile />} />
+          <Route path="Patients" element={<Patients />} />
+          <Route path="Medicalhistory" element={<MedicalHistory />} />
         </Route>
         <Route path="*" element={<NotFound />} />
     </Route>

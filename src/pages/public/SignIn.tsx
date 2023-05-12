@@ -40,7 +40,7 @@ export const SignIn = () => {
           .then((res)=>{
             if(res.ok){
               console.log(res.json())
-              navigate('/dashboard')
+              navigate('/Dashboard')
             }else{
               setErr('something went wrong please try again')
             }

@@ -1,0 +1,133 @@
+.sidebar{
+    border-right-width: 2px; 
+    border-right-style: solid;
+    padding-top: 1rem; 
+    padding-bottom: 1rem;
+    padding-left: 0.5rem; 
+    padding-right: 0.5rem;
+    border-color: #dfe8f6;
+    display: none;
+
+    @media (min-width: 1024px) {
+    display: block;
+  }
+}
+
+.sidebar .active{
+    color: #000000;
+    background-color: #eff3fa;
+    border-radius: 0.25rem; 
+}
+
+.nav-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    color: #848fac; 
+}
+
+.top-nav{
+    display:none;
+
+    @media (min-width: 1024px) {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-bottom-width: 2px; 
+        border-bottom-style: solid;
+        border-color: #dfe8f6;
+      }
+}
+
+.top-nav-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.icon{
+    width: 45px;
+    height:45px;
+}
+
+.top-nav-responsive{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: relative;
+
+    @media (min-width: 1024px) {
+        display: none;
+      }
+}
+
+.top-nav-title{
+    font-weight: bold;
+}
+
+.side-nav{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 20;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    -webkit-box-shadow: 26.5px 0 17.5px 0 #eaeaea;
+    -moz-box-shadow: 26.5px 0 17.5px 0 #eaeaea;
+    box-shadow: 26.5px 0 17.5px 0 #eaeaea;
+}
+
+.side-nav-header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo{
+    width : 100px;
+}
+
+.sidebar-responsive{
+    padding-top: 1rem; 
+    padding-bottom: 1rem;
+    padding-left: 0.5rem; 
+    padding-right: 0.5rem;
+    border-color: #dfe8f6;
+}
+
+.sidebar-responsive .active{
+    color: #000000;
+    background-color: #eff3fa;
+    border-radius: 0.25rem; 
+}
+
+.nav-link-responsive {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    color: #848fac; 
+    font-size: 0.875rem;
+}
+
+.icon-responsive {
+    width: 25px;
+    height: 25px;
+}
