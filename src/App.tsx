@@ -7,8 +7,6 @@ import  AuthRoute from "./config/AuthRoute";
 import { SignIn , SignUp , ResetPassword , OtpVerification , NotFound } from "./pages/public";
 //Private_Pages
 import { Home, DashBoard , Appointments , Profile , EditProfile , Patients , MedicalHistory } from "./pages/private";
-//Loaders
-import { doctorInfoLoader } from "./pages/private/home/Home"; 
 //Error Page
 import { ErrorPage } from "./pages/public/ErrorPage";
 
@@ -28,8 +26,7 @@ const router = createBrowserRouter(
         {/* PRIVATE ROUTES */}
         <Route 
           path="/" 
-          element={<AuthRoute > <Home /> </AuthRoute> } 
-          loader={doctorInfoLoader} 
+          element={<AuthRoute > <Home /> </AuthRoute> }
           errorElement={<ErrorPage />} >
           <Route path="Dashboard" element={<DashBoard />} />
           <Route path="Appointments" element={<Appointments />} />

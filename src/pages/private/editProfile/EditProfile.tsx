@@ -1,10 +1,8 @@
-//react-redux
-import { useAppDispatch } from '../../../app/hooks'
-import { editPicture } from "../../../features/doctor/doctorSlice";
+//redux
+import { useAppDispatch , useAppSelector } from '../../../app/hooks'
+import { editPicture , setCurrentDoctor } from "../../../features/doctor/doctorSlice";
 //react-router-dom
 import { NavLink , useNavigate } from 'react-router-dom'
-//redux
-import { useAppSelector } from '../../../app/hooks'
 //hooks
 import { useState } from 'react';
 //apiURL
@@ -35,7 +33,7 @@ export const EditProfile = () => {
   const removePicture = () =>{
     dispatch(
       editPicture('')
-    )
+      )
   }
 
   const handleProfilePictureChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -54,33 +52,31 @@ export const EditProfile = () => {
 
   const saveChanges = (e:any) =>{
     e.preventDefault()
-    console.log(
-      fullName,
-      specialty,
-      location,
-      description
-      )
-      fetch(`${apiConfig.apiUrl1}/${id}`,{
-        method: 'PUT',
-          body: JSON.stringify({
-            "id": id,
-            "fullName": fullName,
-            "location": location,
-            "title": specialty,
-            "profileDescription": description,
-            "profileImage": profilePicture
-          }),
-          headers: {
-            'Content-type': 'application/json',
-          },
-      }).then((res)=>{
-        if(res.ok){
-          navigate('/Profile')
-        }
-        else{
-          setErr(true)
-        }
-      })
+    const doct = {
+      id : currentDoctor.id,
+      fullName : fullName,
+      title : specialty,
+      location: location,
+      profileImage : profilePicture,
+      profileDescription : description,
+    }
+    fetch(`${apiConfig.apiUrl1}/${id}`,{
+      method: 'PUT',
+        body: JSON.stringify(doct),
+        headers: {
+          'Content-type': 'application/json',
+        },
+    }).then((res)=>{
+      if(res.ok){
+        dispatch(
+          setCurrentDoctor(doct)
+        )
+        navigate('/Profile')
+      }
+      else{
+        setErr(true)
+      }
+    })
   }
 
   return (

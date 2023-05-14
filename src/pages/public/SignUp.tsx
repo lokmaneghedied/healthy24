@@ -54,8 +54,8 @@ export const SignUp = () => {
             id : UserCredential.user.uid,
             fullName : values.fullName,
             location : "Algiers Algeria",
-            title : "",
-            profileDescription : "",
+            title : "Your specialty",
+            profileDescription : "your profile description",
             profileImage : ""
           }
           fetch(`${apiConfig.apiUrl1}`,{
