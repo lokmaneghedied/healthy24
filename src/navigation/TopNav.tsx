@@ -3,6 +3,9 @@ import { NavLink } from "react-router-dom";
 //hooks
 import { useLocation } from "react-router-dom";
 import { useState , useEffect } from "react";
+import { useAppSelector } from '../app/hooks';
+//firebase
+import { getAuth, signOut } from 'firebase/auth';
 //icons
 import { AiOutlineMenu , AiOutlineMenuUnfold } from "react-icons/ai";
 import { IoMdNotificationsOutline , IoMdArrowBack } from "react-icons/io";
@@ -11,6 +14,9 @@ import { CiSettings } from "react-icons/ci";
 import { logo , doctorAvatar } from '../assets'
 //constants
 import { navLinks } from "../constants"
+//icons
+import { BiLogOut } from "react-icons/bi";
+
 
 export const TopNav = () => {
   
@@ -21,7 +27,17 @@ export const TopNav = () => {
   
   const title = location.pathname.substr(1)
   
+  const currentDoctor = useAppSelector((state)=>state.doctor)
+
+  const auth = getAuth();
+
+  const logOut = () =>{
+    signOut(auth)
+    sessionStorage.removeItem("doctorId")
+  }
+
   useEffect(()=>{
+    
     if(title === 'EditProfile'){
       setInProfile(true)
       setToggleSideNav(false)
@@ -32,17 +48,22 @@ export const TopNav = () => {
 
   return (
     <section>
+      
+      {/* TOP-NAV */}
       <div className="top-nav ">
-        <img src={logo} alt="" />
+        <NavLink to='/Dashboard'>
+          <img src={logo} alt="" />
+        </NavLink>
         <div className='top-nav-content'>
             <CiSettings className="icon-responsive"/>
             <IoMdNotificationsOutline className="icon-responsive"/>
             <NavLink to='Profile'>
-              <img className="icon" src={doctorAvatar} alt="" />
+              <img className="icon" src={currentDoctor.profileImage ? currentDoctor.profileImage : doctorAvatar} alt="" />
             </NavLink>
         </div>
       </div>
-      
+
+      {/* TOP-NAV-RESPONSIVE */}
       <div className="top-nav-responsive">
         {!inProfile && <AiOutlineMenu onClick={()=>{setToggleSideNav(true)}} className="icon-responsive" />}
         {inProfile && <NavLink to='/Profile'>
@@ -63,7 +84,7 @@ export const TopNav = () => {
           {/* PROFILE */}
           <div className="sidebar-responsive">            
             <NavLink to='/Profile' className='nav-link-responsive'>
-              <img className="icon-responsive" src={doctorAvatar} alt="" />
+              <img className="icon-responsive" src={currentDoctor.profileImage ? currentDoctor.profileImage : doctorAvatar}  alt="" />
               <p>Edit My Profile</p> 
             </NavLink>
             <span className='nav-link-responsive'>
@@ -88,9 +109,15 @@ export const TopNav = () => {
                 <p>{link.name}</p>
               </NavLink>
             ))}
+            <button className='nav-link' onClick={logOut}>
+              <BiLogOut className='icon-responsive '/>
+              <p>Log out</p> 
+            </button>
           </div>
         </div>}
       </div>
     </section>
   )
 }
+
+

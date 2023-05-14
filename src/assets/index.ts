@@ -18,6 +18,7 @@ import messages from './messages.png'
 import patients from './patients.png'
 import cover from './cover.png'
 import logo from './logo.png'
+import edit from './edit.png'
 
 export {
     hand,
@@ -32,6 +33,7 @@ export {
     messages,
     cover,
     logo,
+    edit,
     patients,
     patient1,
     patient2,

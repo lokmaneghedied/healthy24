@@ -207,3 +207,21 @@ label{
         height: 40px;
     }
 }
+
+.error-page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-page-title{
+    font-size: 1.875rem; /* 3xl in Tailwind is equivalent to a font-size of 1.875rem */
+    color: #EF4444; 
+}
+
+.error-page-link{
+    font-weight: 700
+}

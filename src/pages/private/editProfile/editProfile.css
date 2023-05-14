@@ -1,0 +1,83 @@
+.editProfile_section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    margin: 10px;
+    padding: 10px;
+    gap: 16px;
+    border-radius: 0.5rem;
+    border-width: 2px;
+    border-color: #DFE8F6;
+    font-size: small;
+}
+
+@media (min-width: 768px) {
+    .editProfile_section{
+        padding: 26px;
+    }
+  }
+
+.editProfile-container > * + * {
+    margin-top: 0.5rem;
+}
+
+.editProfile-cover {
+    height: 100px;
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .editProfile-cover {
+      height: 150px;
+    }
+}
+
+.editProfile-picture {
+    display: flex;
+    align-items: center;
+  }
+  
+  .editProfile-picture > * + * {
+    margin-left: 0.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .editProfile-picture > * + * {
+      margin-left: 1rem;
+    }
+  }
+
+.editProfile_input{
+    border: 1px solid #848FAC; 
+    border-radius: 0.5rem; 
+    padding: 0.5rem 0.5rem; 
+    width: 100%;
+
+
+    &:focus {
+        outline: none;
+        border-color: #848FAC;
+        box-shadow: none;
+      }
+}
+
+.editProfile-buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .editProfile-buttons > * + * {
+    margin-left: 1rem;
+  }
+
+  .editProfile_avatar {
+    width:60px;
+    height:60px;
+  }
+
+  .err-msg{
+    font-weight: bold;
+    color: #ff0000;
+  }

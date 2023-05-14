@@ -6,28 +6,40 @@ import  AuthRoute from "./config/AuthRoute";
 //Public_Pages
 import { SignIn , SignUp , ResetPassword , OtpVerification , NotFound } from "./pages/public";
 //Private_Pages
-import { Home, DashBoard , Appointments , Profile , Patients , MedicalHistory } from "./pages/private";
-
-
+import { Home, DashBoard , Appointments , Profile , EditProfile , Patients , MedicalHistory } from "./pages/private";
+//Loaders
+import { doctorInfoLoader } from "./pages/private/home/Home"; 
+//Error Page
+import { ErrorPage } from "./pages/public/ErrorPage";
 
 initializeApp(config.firebaseConfig)
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
+      {/* PUBLIC ROUTES */}
         <Route path="/" element={<SignIn />} />
         <Route path="signup" element={<SignUp />} />
         <Route path="resetpassword" >
           <Route index element={<ResetPassword />} />
           <Route path="otpverification/:email" element={<OtpVerification />} />
         </Route>
-        <Route path="/" element={<AuthRoute > <Home /> </AuthRoute> } >
+
+        {/* PRIVATE ROUTES */}
+        <Route 
+          path="/" 
+          element={<AuthRoute > <Home /> </AuthRoute> } 
+          loader={doctorInfoLoader} 
+          errorElement={<ErrorPage />} >
           <Route path="Dashboard" element={<DashBoard />} />
           <Route path="Appointments" element={<Appointments />} />
           <Route path="Profile" element={<Profile />} />
+          <Route path="EditProfile" element={<EditProfile />} />
           <Route path="Patients" element={<Patients />} />
           <Route path="Medicalhistory" element={<MedicalHistory />} />
         </Route>
+        
+        {/* NOT FOUND PAGE */}
         <Route path="*" element={<NotFound />} />
     </Route>
   )

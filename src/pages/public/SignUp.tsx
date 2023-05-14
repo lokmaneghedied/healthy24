@@ -13,7 +13,8 @@ import './index.css'
 //icons
 import { BsGoogle , BsFacebook } from "react-icons/bs";
 import { AiFillEye , AiFillEyeInvisible } from "react-icons/ai";
-
+//apiURL
+import apiConfig from "../../apiConfig";
 
 interface Doctor {
   id  : string,
@@ -21,8 +22,7 @@ interface Doctor {
   title : string,
   location: string,
   profileDescription: string,
-  profileImage : string,
-  profileCover: string
+  profileImage : string
 }
 
 interface FormValues {
@@ -56,22 +56,22 @@ export const SignUp = () => {
             location : "Algiers Algeria",
             title : "",
             profileDescription : "",
-            profileImage : "",
-            profileCover : ""
+            profileImage : ""
           }
-          fetch('http://localhost:5000/doctors',{
+          fetch(`${apiConfig.apiUrl1}`,{
             method : 'POST',
             headers : {'Content-type':'application/json'} ,
             body: JSON.stringify(newDoctor)
           }).then((res)=>{
             if(res.ok){
                 setErr('')
+                sessionStorage.setItem("doctorId", UserCredential.user.uid)
                 navigate('/Dashboard')
             }else{
               setErr('something went wrong, please try again')
             }
           }).catch(()=>{
-            setErr('account created, failed to signUp , please try to logIn')
+            setErr('account created, failed to logIn ')
           })
         }).catch((error)=>{
           setErr(error.code)

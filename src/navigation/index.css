@@ -1,3 +1,7 @@
+.sidebar-toggled{
+    display: none;
+}
+
 .sidebar{
     border-right-width: 2px; 
     border-right-style: solid;

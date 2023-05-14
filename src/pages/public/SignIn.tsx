@@ -13,6 +13,7 @@ import './index.css'
 //icons
 import { BsGoogle , BsFacebook } from "react-icons/bs";
 import { AiFillEye , AiFillEyeInvisible } from "react-icons/ai";
+
 interface FormValues {
   fullName: string,
   email: string ,
@@ -28,6 +29,8 @@ export const SignIn = () => {
 
   const [err, setErr] = useState('')
 
+  
+
   const formik = useFormik({
     initialValues:{
         email:'',
@@ -36,21 +39,13 @@ export const SignIn = () => {
     onSubmit : values  =>{
       signInWithEmailAndPassword(auth, values.email, values.password)
         .then((UserCredential)=>{
-          fetch(`http://localhost:5000/doctors/${UserCredential.user.uid}`)
-          .then((res)=>{
-            if(res.ok){
-              console.log(res.json())
-              navigate('/Dashboard')
-            }else{
-              setErr('something went wrong please try again')
-            }
-          }).catch((error)=>{
-            setErr('something went wrong please try again')
-          })
-        }).catch((error)=>{
-          setErr(error.code)
+          sessionStorage.setItem("doctorId", UserCredential.user.uid)
+            navigate('/Dashboard')
         })
-      },
+        .catch((error)=>{
+            setErr(error.code)
+          })
+        },
     validate : values =>{
         let errors: FormikErrors<FormValues> = {};
         const emailRegex = /^\S+@\S+\.\S+$/
