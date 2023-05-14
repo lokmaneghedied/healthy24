@@ -47,7 +47,7 @@
     .editProfile-picture > * + * {
       margin-left: 1rem;
     }
-  }
+}
 
 .editProfile_input{
     border: 1px solid #848FAC; 
@@ -75,9 +75,13 @@
   .editProfile_avatar {
     width:60px;
     height:60px;
-  }
+}
 
-  .err-msg{
-    font-weight: bold;
-    color: #ff0000;
-  }
+.err-msg{
+  font-weight: bold;
+  color: #ff0000;
+}
+
+.editProfile-input-picture{
+  display: none;
+}

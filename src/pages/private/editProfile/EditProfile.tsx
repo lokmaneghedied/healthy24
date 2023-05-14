@@ -20,8 +20,9 @@ export const EditProfile = () => {
   const [specialty , setSpecialty] = useState('')
   const [location , setLocation] = useState('')
   const [description , setDescription] = useState('')
-  const [newImageFile, setNewImageFile] = useState<File | null>(null);
-  const [newImage, setNewImage] = useState<string | null>(null);
+
+  const [profilePicture, setProfilePicture] = useState('');
+
   const [err, setErr] = useState(false)
 
   const navigate = useNavigate();
@@ -31,28 +32,25 @@ export const EditProfile = () => {
 
   const currentDoctor = useAppSelector((state)=>state.doctor)
 
-  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const selectedFile = event.target.files && event.target.files[0];
-    setNewImageFile(selectedFile);
-  }
-
-  const handleImageUpload = () => {
-    if (!newImageFile) {
-      return;
-    }
-  
-    const reader = new FileReader();
-    reader.onload = () => {
-      setNewImage(reader.result as string);
-    };
-    reader.readAsDataURL(newImageFile);
-  }
-
   const removePicture = () =>{
     dispatch(
       editPicture('')
     )
   }
+
+  const handleProfilePictureChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files && event.target.files.length > 0) {
+      const reader = new FileReader();
+      reader.readAsDataURL(event.target.files[0]);
+      reader.onload = () => {
+        const dataUrl = reader.result as string;
+        setProfilePicture(dataUrl);
+        dispatch(
+          editPicture(dataUrl)
+        )
+      };
+    }
+  };
 
   const saveChanges = (e:any) =>{
     e.preventDefault()
@@ -70,7 +68,7 @@ export const EditProfile = () => {
             "location": location,
             "title": specialty,
             "profileDescription": description,
-            "profileImage": newImage
+            "profileImage": profilePicture
           }),
           headers: {
             'Content-type': 'application/json',
@@ -101,9 +99,15 @@ export const EditProfile = () => {
             <h1 className='profile-title'>Profile Picture</h1>
             <div className='editProfile-picture'>
               <img className='editProfile_avatar ' src={currentDoctor.profileImage ? currentDoctor.profileImage : doctorAvatar} alt="" />
-              <button className='btn' onClick={handleImageUpload}>
-                <input type="file" onChange={handleImageChange} />
-                change photo</button>
+              <label className='btn'>change picture
+                <input 
+                  className='editProfile-input-picture' 
+                  type="file"  
+                  onChange={handleProfilePictureChange}
+                  accept="image/*"
+                  />
+              </label>
+
               <button className='white_btn' onClick={removePicture}>Remove</button>
             </div>
           </div>
