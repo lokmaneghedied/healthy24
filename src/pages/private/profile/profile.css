@@ -44,7 +44,7 @@
   border-top: none;
   border: 2px solid #DFE8F6;
   border-radius: 0 0 0.5rem 0.5rem;
-  height: 150px;
+  height: 140px;
   width: 100%;
   padding: 1.5rem 6px 1.5rem;
 }
@@ -125,7 +125,7 @@
 .profile-image {
   position: absolute;
   left: 5px;
-  bottom: 50%;
+  bottom: 48%;
   background-color: white;
   padding: 0.25rem;
   border-radius: 50%;
