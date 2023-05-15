@@ -1,9 +1,9 @@
-import { PaginatedItems } from '../../../Pager'
+import { PaginatedItems } from '../../../pagination/Pager'
 
 export const MedicalHistory = () => {
   return (
-    <section className="m-4 w-full">
-      <h1 className="font-bold text-lg">Medical History</h1>
+    <section className="medical-history-page">
+      <h1 className="medical-history-page-title">Medical History</h1>
       {/* LIST */}
       <PaginatedItems itemsPerPage={7}/>
     </section>

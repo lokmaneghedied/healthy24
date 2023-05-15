@@ -46,7 +46,7 @@ const initialState = [
         payFrom:'Oran Bank',
         payOn :"jan 12, 2023 At 09:00 AM",
         from: "Oran",
-        status :"Pending",
+        status :"Canceled",
         medicalCheckUp :500,
         medicine :20,
         icon : patient3
@@ -93,7 +93,7 @@ const initialState = [
         payFrom:'Oran Bank',
         payOn :"jan 12, 2023 At 09:00 AM",
         from: "Oran",
-        status :"Pending",
+        status :"Canceled",
         medicalCheckUp :500,
         medicine :20,
         icon : patient3
@@ -140,7 +140,7 @@ const initialState = [
         payFrom:'Oran Bank',
         payOn :"jan 12, 2023 At 09:00 AM",
         from: "Oran",
-        status :"Pending",
+        status :"Canceled",
         medicalCheckUp :500,
         medicine :20,
         icon : patient3
@@ -187,7 +187,7 @@ const initialState = [
         payFrom:'Oran Bank',
         payOn :"jan 12, 2023 At 09:00 AM",
         from: "Oran",
-        status :"Pending",
+        status :"Canceled",
         medicalCheckUp :500,
         medicine :20,
         icon : patient3
@@ -234,7 +234,7 @@ const initialState = [
         payFrom:'Oran Bank',
         payOn :"jan 12, 2023 At 09:00 AM",
         from: "Oran",
-        status :"Pending",
+        status :"Canceled",
         medicalCheckUp :500,
         medicine :20,
         icon : patient3
@@ -281,7 +281,7 @@ const initialState = [
         payFrom:'Oran Bank',
         payOn :"jan 12, 2023 At 09:00 AM",
         from: "Oran",
-        status :"Pending",
+        status :"Canceled",
         medicalCheckUp :500,
         medicine :20,
         icon : patient3
