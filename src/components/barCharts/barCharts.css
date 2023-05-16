@@ -1,0 +1,26 @@
+.apexcharts-tooltip {
+    background-color: #2A3563 !important;
+    color: #ffffff !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+  }
+
+
+.apexcharts-bar-series path {
+    border-radius: 0.5rem !important;
+    fill: #DFE8F6 !important;
+  }
+
+
+  .apexcharts-bar-series path:hover {
+  fill: #56CCF2 !important;
+}
+
+.apexcharts-toolbar {
+  display: none !important;
+}
+.mixed-chart{
+  width: 100%;
+}

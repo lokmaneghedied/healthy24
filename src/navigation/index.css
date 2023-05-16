@@ -92,9 +92,7 @@
     padding-bottom: 1rem;
     margin-top: 0;
     margin-bottom: 0;
-    -webkit-box-shadow: 26.5px 0 17.5px 0 #eaeaea;
-    -moz-box-shadow: 26.5px 0 17.5px 0 #eaeaea;
-    box-shadow: 26.5px 0 17.5px 0 #eaeaea;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
     height:100vh;
 }
 

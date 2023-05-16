@@ -6,10 +6,11 @@ import  AuthRoute from "./config/AuthRoute";
 //Public_Pages
 import { SignIn , SignUp , ResetPassword , OtpVerification , NotFound } from "./pages/public";
 //Private_Pages
-import { Home, DashBoard , Appointments , Profile , EditProfile , Patients , MedicalHistory } from "./pages/private";
+import { Home, DashBoard , Profile , EditProfile , MedicalHistory } from "./pages/private";
 //Error Page
 import { ErrorPage } from "./pages/public/ErrorPage";
-
+//LOoaders
+import { doctorInfoLoader } from "./pages/private/home/Home";
 initializeApp(config.firebaseConfig)
 
 const router = createBrowserRouter(
@@ -27,12 +28,11 @@ const router = createBrowserRouter(
         <Route 
           path="/" 
           element={<AuthRoute > <Home /> </AuthRoute> }
+          loader={doctorInfoLoader}
           errorElement={<ErrorPage />} >
           <Route path="Dashboard" element={<DashBoard />} />
-          <Route path="Appointments" element={<Appointments />} />
           <Route path="Profile" element={<Profile />} />
           <Route path="EditProfile" element={<EditProfile />} />
-          <Route path="Patients" element={<Patients />} />
           <Route path="Medicalhistory" element={<MedicalHistory />} />
         </Route>
         

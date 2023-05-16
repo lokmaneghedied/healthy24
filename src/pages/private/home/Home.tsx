@@ -52,15 +52,15 @@ export const Home = () => {
 }
 
 
-// //loader
+//loader
 
-// export const doctorInfoLoader = async () =>{
+export const doctorInfoLoader = async () =>{
 
-//   const id = sessionStorage.getItem("doctorId")
+  const id = sessionStorage.getItem("doctorId")
   
-//   const res = await fetch(`${apiConfig.apiUrl1}/${id}`)
-//   if(!res.ok){
-//     throw Error('something went wrong, please try again')
-//   }
-//   return res.json()
-// }
+  const res = await fetch(`${apiConfig.apiUrl1}/${id}`)
+  if(!res.ok){
+    throw Error('something went wrong, please try again')
+  }
+  return res.json()
+}
