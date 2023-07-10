@@ -6,6 +6,7 @@ import { Home } from "./home/Home";
 import { PatientsList } from "./patientsList/PatientsList";
 import { PatientDetails } from "./patientDetails/PatientDetails";
 import { PatientsLayout } from "../../navigation/PatientsLayout";
+import { Appointments } from "./appointments/Appointments";
 export {
     DashBoard,
     Profile,
@@ -14,5 +15,6 @@ export {
     Home,
     PatientsList,
     PatientDetails,
-    PatientsLayout
+    PatientsLayout,
+    Appointments
 }

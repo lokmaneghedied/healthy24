@@ -6,7 +6,7 @@ import  AuthRoute from "./config/AuthRoute";
 //Public_Pages
 import { SignIn , SignUp , ResetPassword , OtpVerification , NotFound } from "./pages/public";
 //Private_Pages
-import { Home, DashBoard , Profile , EditProfile , MedicalHistory , PatientsList , PatientDetails , PatientsLayout } from "./pages/private";
+import { Home, DashBoard , Profile , EditProfile , MedicalHistory , PatientsList , PatientDetails , PatientsLayout , Appointments } from "./pages/private";
 //Error Page
 import { ErrorPage } from "./pages/public/ErrorPage";
 //Loaders
@@ -38,6 +38,7 @@ const router = createBrowserRouter(
             <Route index element={<PatientsList />} />
             <Route path=":id" element={<PatientDetails/>}/>
           </Route>
+          <Route path='Appointments' element={<Appointments />} />
         </Route>
         
         {/* NOT FOUND PAGE */}
