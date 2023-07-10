@@ -40,6 +40,7 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
+        height: 15vh;
         padding-left: 1rem;
         padding-right: 1rem;
         padding-top: 1rem;
@@ -78,6 +79,7 @@
 
 .top-nav-title{
     font-weight: bold;
+    color: #192252;
 }
 
 .side-nav{
@@ -94,6 +96,7 @@
     margin-bottom: 0;
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
     height:100vh;
+    overflow-y: auto;
 }
 
 .side-nav-header{

@@ -1,0 +1,15 @@
+.pagination-active{
+    color: #192252;
+    background-color: #EFF3FA;
+    border-radius: 0.375rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.pagination{
+    display: flex;
+    justify-content: flex-end;
+    color: #A9B4CD;
+    gap: 1rem;
+    padding: 0.5rem;
+}

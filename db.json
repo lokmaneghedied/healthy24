@@ -40,5 +40,623 @@
       "time": "09AM - 10AM",
       "description": "I wake up with a sore throat and difficulty swallowing. it's making it hard for me to eat and drink anything"
     }
+  ],
+  "patients":[
+    {
+      "id": 1,
+      "fullName":"Sarah Lee",
+      "address":"321 Maple st, anytown, USA",
+      "picture": "data:image/png;base64,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",
+      "appointments": 15,
+      "completedAppointments": 12,
+      "weight": "160lb",
+      "height": "1,80m",
+      "bloodType": "o- (Negative)",
+      "BloodGlucose" : "92mg/dl",
+      "bloodPressure": "120/80mmHg",
+      "disease": "Diabetes",
+      "allergies" : "Peanuts",
+      "appointmentsNotes": [
+          {
+              "id":1,
+              "date":"March 22,2023",
+              "title": "Diabetes Control Appointment",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Check-up",
+              "duration":"3 months",
+              "document":"check-up-result.pdf"
+          },
+          {
+              "id":2,
+              "date":"March 22,2022",
+              "title": "X-ray scanning bones",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          },
+          {
+              "id":3,
+              "date":"March 22,2022",
+              "title": "Diabetes Consultation",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          }
+      ]
+    },
+    {
+      "id": 2,
+      "fullName":"Jane Doe",
+      "address":"456 Elm st, anytown, USA",
+      "picture": "data:image/png;base64,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",
+      "appointments": 15,
+      "completedAppointments": 12,
+      "weight": "160lb",
+      "height": "1,80m",
+      "bloodType": "o- (Negative)",
+      "BloodGlucose" : "92mg/dl",
+      "bloodPressure": "120/80mmHg",
+      "disease": "Diabetes",
+      "allergies" : "Peanuts",
+      "appointmentsNotes": [
+          {
+              "id":1,
+              "date":"March 22,2023",
+              "title": "Diabetes Control Appointment",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Check-up",
+              "duration":"3 months",
+              "document":"check-up-result.pdf"
+          },
+          {
+              "id":2,
+              "date":"March 22,2022",
+              "title": "X-ray scanning bones",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          },
+          {
+              "id":3,
+              "date":"March 22,2022",
+              "title": "Diabetes Consultation",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          }
+      ]
+    },
+    {
+      "id": 3,
+      "fullName":"Jane Doe",
+      "address":"456 Elm st, anytown, USA",
+      "picture": "data:image/png;base64,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",
+      "appointments": 15,
+      "completedAppointments": 12,
+      "weight": "160lb",
+      "height": "1,80m",
+      "bloodType": "o- (Negative)",
+      "BloodGlucose" : "92mg/dl",
+      "bloodPressure": "120/80mmHg",
+      "disease": "Diabetes",
+      "allergies" : "Peanuts",
+      "appointmentsNotes": [
+          {
+              "id":1,
+              "date":"March 22,2023",
+              "title": "Diabetes Control Appointment",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Check-up",
+              "duration":"3 months",
+              "document":"check-up-result.pdf"
+          },
+          {
+              "id":2,
+              "date":"March 22,2022",
+              "title": "X-ray scanning bones",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          },
+          {
+              "id":3,
+              "date":"March 22,2022",
+              "title": "Diabetes Consultation",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          }
+      ]
+    },
+    {
+      "id": 4,
+      "fullName":"Jane Doe",
+      "address":"456 Elm st, anytown, USA",
+      "picture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAA0hSURBVHgBnVhJbFvXFT1/4ExRlCjJsuWBkofESVNbCArEaIvITVEgQAOkBdptvOyqVjbZyl51aXnRTTbxoou2KJAsukmBwHLq2EmdRLLleIgtiZ40URLn4fNPPfd9Uh4TD9/+IvmH9847995z730aXvBYuHNnDJ520PWcNzVNPwj4aQ162ofPryh68HMaT99zL8Lzpvbu3TuFFzi053l4eno6HY6njpqmPs6fabnm+x503QgG0oLhBKTGf74vYD2BDM/3c7btTNWK9eOHDo3mnnXOZwJ4ZHw8/erIvomBvsy4aRrBa/KfgAwd0DUdrgAK0AkY4vJIHK/qGsIhE42mjUa9ikKlgu1D2VP9Q/3H3z50KPe0uZ8K8K8ffnh0Pb9+LGSa6ZAZUiR5rqvY8QkuEY0hmUrR2jrMcJj3DRiGiRBBhcMhRHjG41HYjoem5cJqtbClv0+GzrVs5/jhQ6+femGArVbrRMu2xz3PR2C44AVlOvkt1zUogxq6rhh1eU2ed7kIXdglg4ZhQF5ZL1aRL1SQSkRRrdZgWZY8P/nmG6PvPxdAAkjbtv0xP8cee0Fr+9YPHIpZX0B6m99N0yRQHXkCvL2Ux9BALwqFkgLYIrOO48zA0g4fPjxafHQ8HU9kzjr9JHAdAD92yAIEjLAmwEKhkAKrAPOf/NV4X+d9OQ2DzxvaQUT8j5803mMAq9XKCYI4GKzeU+ezH/fBe55DX7WA9oLE5FAeESxAnFmBpO8aogKaPjZ9+caJHwV46fvbR2zHHXddR6ZoT+g/HZbvwnOaqFfzqFXXCMyG2yihsTZPYE3FksFwpzsGYGTits9KlGtyjb9DYXN87tby+INjm50v01cXspSGCZEI1/M2BwhM6skKH2Zn8xmdweJg+doXWLo9h8X5a+jp6YdtxLBr+yCGUoNki0zppmJNgBKvAqsLQE3Yc9VYoqdmSJ9YWCicGh7uKT4EkKue0EORLEMfjhs4eYSyIQedWAERvwoAyl8tACduYDdx/cvP8O//nEEuX8YbL++mpDi4HNEwOP0tDv/hT+gZ2Nk2rxboJ88wkdqOElQ1lpib99KhpDfBCd7fNPHp0+ezrm0fkVUFc+sQBRFgrus9FJVqcCPQugAgJ62tY+rs17h8aw0LKxTjfAHiJYNDe5BKbUOzchd2o6wsEdKVUClwcsp4SlARBJg6fW2cLKY3AWrh0ITWXpnEhCYZihPbRGlxJpvgXGaFDsjOIY5v1yuw1nKYu7WI7d1xjO3ZimQ0hFf3ZpHKDCHqG2gU63D9JtzqOsJ2DY5Vh+a1YHmBi3RY1dpmlyMc98bvA9S1sc3o8gPzCYsiwA4RExoHE72yVUAokW4D1b0mlu4soN60MNAVx4E9+5CIZXDt8kW+68OIxVBcWobbbCCcSCPCzGOGY3D1SKDC2gPMaXrb3OriUeWD/z0/PUaysmoy8QumszgZ6AQJEFWAbLIlLFo0e1iZF6oQcJhfL89e4cthNBoOfM2EzYliZhzLi7eQ2TWCRiUPh7kYMVux5bdzOR9Wftkxb6fYaB/pO0v5MZOxOKZr/uZDuikCa9x/CYGU6YpUk74pTHrBRGS1Vinhys2cYtRq+eiJd2HXzpdQXmJEF+h7zSZC8QwunLuILdm96B3oAzM2TW4o2dZUYARa+yC8NqMHdc3UD2yyxVMBcIN82klVckiuZZmFEAOEw5JRH81GHY2NPKYvzTER6Hhp+y4+E1ayYhKoxnfv3vwaPqVlJV/B7IVpTJ+7gOszs6rgwKZptU0yOpmorRNjJsnLapLM1QVfhXrHaVUZ8MCLik3ei4Q1rC4uY23+KpZv3MTQlgzWl1fRn+lDLLUF9+bn0d0Xw+oGozl2FyM6A80JKqD1fJ7nGu7kckh2dSHJd7oHBvEohSpgdf+AiE920zkVRH9T+9wnZDlWOJj99hK+Oj2FhcuXsP+td/DBB3+meSs4e+UamiwIBod24MatHBq0wu17S/ji7LdKPIWXFgsEx7axsZLH3YUFzJ4/j2sXvgpYfLx2SZtSpiu0AWxVLqngUhonZRPaJZWPjfwGvvniS1QLRZURmlUPc5cuYXRPGru29eOfX81ig7Hwx7d+joGh7fBMCw2jDz39I8F0UrxGYmBlzXFtLtZRwO4K45l+ZF4/+CjEdCAz4qidW34QTKYRVMsCvFis4H/np3H2088IrqB49mgyi3537szn+G72MtxwEowRnPtuFgs0Y/+2nahUG/h+/jo2CuuqmA2FwptCL4WCSJltuyoIl27ngpr84UhWqa4o6aVdaiAoTu/7nAxw4ex5lDmp79iB/BC5CLvelcTKlTX8/R8XkVvZYABRN+kXMerc3YV53FsrMNKjaDUaWFtZQTSeQDgabWcmP7BSmyDRx0fBCTaTQAgQ6Q6DUixIFGtaEDYzjLyNlSUKMlQyl/u2RfNQPtaX72HfzhHMXlxBsUwhJnDTCKGvtw+fnf6U4u1g9ys/JXMRBaSwtg6qBmIEWqvVFIPd3SkYrBu7enoDA/oBi231yIkPzvBCFm0t9NGpisW0ReSuXoXmBKHjMO1J8NgtC7fn5xCPsEdJpLBjeD+WyHBVssmWnXAp1o1GE9ndr2Db9r0sw6qK+RYtIOyyWkdXqkvl81gyqc6tI7vVnApYJ6V6uGV6nn1Gg/lup7QKHgrYVpWwKjTdoP8gTFbbuHltFkkC685sQaVeo+mS2EkmsyMvq08/FMe777yL1WYoaElVUSr+ZjE3R/jZQoaNk8mGqtVsYWjvPuhcbCfN+20Q1OQZ3Xf8GTyQZjoVi5yZTAbD+/crv2qRuY21NVg0LV0cvX0DSnIk/ZlMj8lEN/bu+4kC3bBZrfRuhRGOq4k0JfImF+myzNLJbkOdAm5gx0509WUQ1KG+kjbB5zINsiCa0n956LUpccaOSsoidCMQaxH0Az87oCQjxszQ3dMHt2VjcOsOJFJp1V/EonFEk13YtmsPmgRfJ6O1ehOzV+YCOrRgvM2M1O5VdGabnv5+7Hj1FbTEdSg9NtHZjq+yFIvm3PDW/ilVsPqadpIjTUiJpX5LhOnB92g0gt+8+zaK7MIW7yyiWiqgWWti+dYd3osp4Y0nUwhFKYBlXfmalGG9mQFVfEhDLwyLhERC4UBrxRfZK4cY0Z4WiL9YSQoS+dR9GQdTHZmB2cIkXWNCcqxQLPlYFZHKD+S3i1giieGX9inBXs+vIn/3nnJml/5kk4FQOIJUby/NZimThtvVeKfDa9KksiDp8ppWU+6gi2kuyXHDEfolLSN1Z81qUQkMFrb+cfW+/BkdHS6Ss5NihgLFtVBt8bSwUWFKqrRQrNooN1oo02eKZK/RctWqTUah+IRL2QnAGApEsjtN/yNrIsjtFlPGDkeiDBaNWyB1dPdnkN03Atk0ERBsmLhLEWG5Z6Deap3aP7w1t8mgGtzyjvlRvLeysZEWc4ikNNt+IROLpERC8hlmUPsqM4gdDA7YrFUYyfFO5AXiK4Eo7YJSA1dZQZUfUqbxZrK7hw2SKdql3jMZPCFTWgk9l9AC9h4CKCxenFs+PrJt8ESEL0a5IpMqaarSx1ctgEwuvy9ev6akIxyLMqrrQdlFkGbowSZLU77oe0H7Ku2mVObBphKDwGnR1/wgvfGaxncbNG8iET8+3GZv08Sd48Duwcm6ZZ0UP6gzkVs0ZbHGhG+5SgJksaU679XqqJUritkYI1gcv1wqKn1z2xtLnf5FemxPtQuOyvclPqeaeC7UkmKBoiU5ukwxFzcb3tpz6kFMj+0svL5v+zhHnqrRx2psHcVcNTp+tcF9FEnsUjOS4Uq5iGq5pMr3KB3d5qIsMil9S9ANuipjtHhdfivQfLrMhYmfOjYDjIEoPfba+holypl5bc+28UfxPHFvJtkT+Z3p6zOycin+o4w8ZRphg7LS09ujgOVXllFYX1c5NczmqFQsq7QmIBU4JeSeYkq231wu0GI2STALSUYqFQu4cmkWhVJ1Kmk0Dj8Ji/mki8M9qqsf/fri3KRj6kdFs8KMMNFHh0Ja5yYkmhswGZWrq8uIEVwXnV4qlVKppLYy4olEYFoCFZ9TJRbHWM2vYCTbg3VWN2ac3R38k7//1Rvj+IHjqRuYn39z80h5eXHCKm9k3VoJDvdfPOmFGxV8v1hhOgrBomxQ7JEiSMkaUisqsTeCPluiVVqJYqXI3mQVQ9t2YNdLLxd3v37o+G8Pj07+2PzPtAX80V+OZdnpHTN8vKc2hmhqi+3mbG4dlaaLKr/3pTOo0weFVYnwltWgj7noojlTiS4l0NdvXEWaGSYWjpw0e2PHJicni0+b+7k20T86dixbqxePFYr5N1nPZXMF8TMXt1eXuA9NnTQjGOwfQILVjVRAkuLurCyykU+ivzdTnFu4eXKwLzt56pNTRTzj8VwAHzyO/PoXY6tNjJUbjQMbpVKW5UA2EjbTUu8xgxSHd+4uXp+/PvPaK6Nnmo3qzN8++dcUXuD4P6bXKAJ9M7YPAAAAAElFTkSuQmCC",
+      "appointments": 15,
+      "completedAppointments": 12,
+      "weight": "160lb",
+      "height": "1,80m",
+      "bloodType": "o- (Negative)",
+      "BloodGlucose" : "92mg/dl",
+      "bloodPressure": "120/80mmHg",
+      "disease": "Diabetes",
+      "allergies" : "Peanuts",
+      "appointmentsNotes": [
+          {
+              "id":1,
+              "date":"March 22,2023",
+              "title": "Diabetes Control Appointment",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Check-up",
+              "duration":"3 months",
+              "document":"check-up-result.pdf"
+          },
+          {
+              "id":2,
+              "date":"March 22,2022",
+              "title": "X-ray scanning bones",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          },
+          {
+              "id":3,
+              "date":"March 22,2022",
+              "title": "Diabetes Consultation",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          }
+      ]
+    },
+    {
+      "id": 5,
+      "fullName":"Jane Doe",
+      "address":"456 Elm st, anytown, USA",
+      "picture": "data:image/png;base64,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",
+      "appointments": 15,
+      "completedAppointments": 12,
+      "weight": "160lb",
+      "height": "1,80m",
+      "bloodType": "o- (Negative)",
+      "BloodGlucose" : "92mg/dl",
+      "bloodPressure": "120/80mmHg",
+      "disease": "Diabetes",
+      "allergies" : "Peanuts",
+      "appointmentsNotes": [
+          {
+              "id":1,
+              "date":"March 22,2023",
+              "title": "Diabetes Control Appointment",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Check-up",
+              "duration":"3 months",
+              "document":"check-up-result.pdf"
+          },
+          {
+              "id":2,
+              "date":"March 22,2022",
+              "title": "X-ray scanning bones",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          },
+          {
+              "id":3,
+              "date":"March 22,2022",
+              "title": "Diabetes Consultation",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          }
+      ]
+    },
+    {
+      "id": 6,
+      "fullName":"Sarah Lee",
+      "address":"321 Maple st, anytown, USA",
+      "picture": "data:image/png;base64,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",
+      "appointments": 15,
+      "completedAppointments": 12,
+      "weight": "160lb",
+      "height": "1,80m",
+      "bloodType": "o- (Negative)",
+      "BloodGlucose" : "92mg/dl",
+      "bloodPressure": "120/80mmHg",
+      "disease": "Diabetes",
+      "allergies" : "Peanuts",
+      "appointmentsNotes": [
+          {
+              "id":1,
+              "date":"March 22,2023",
+              "title": "Diabetes Control Appointment",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Check-up",
+              "duration":"3 months",
+              "document":"check-up-result.pdf"
+          },
+          {
+              "id":2,
+              "date":"March 22,2022",
+              "title": "X-ray scanning bones",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          },
+          {
+              "id":3,
+              "date":"March 22,2022",
+              "title": "Diabetes Consultation",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          }
+      ]
+    },
+    {
+      "id": 7,
+      "fullName":"Jane Doe",
+      "address":"456 Elm st, anytown, USA",
+      "picture": "data:image/png;base64,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",
+      "appointments": 15,
+      "completedAppointments": 12,
+      "weight": "160lb",
+      "height": "1,80m",
+      "bloodType": "o- (Negative)",
+      "BloodGlucose" : "92mg/dl",
+      "bloodPressure": "120/80mmHg",
+      "disease": "Diabetes",
+      "allergies" : "Peanuts",
+      "appointmentsNotes": [
+          {
+              "id":1,
+              "date":"March 22,2023",
+              "title": "Diabetes Control Appointment",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Check-up",
+              "duration":"3 months",
+              "document":"check-up-result.pdf"
+          },
+          {
+              "id":2,
+              "date":"March 22,2022",
+              "title": "X-ray scanning bones",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          },
+          {
+              "id":3,
+              "date":"March 22,2022",
+              "title": "Diabetes Consultation",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          }
+      ]
+    },
+    {
+      "id": 8,
+      "fullName":"Jane Doe",
+      "address":"456 Elm st, anytown, USA",
+      "picture": "data:image/png;base64,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",
+      "appointments": 15,
+      "completedAppointments": 12,
+      "weight": "160lb",
+      "height": "1,80m",
+      "bloodType": "o- (Negative)",
+      "BloodGlucose" : "92mg/dl",
+      "bloodPressure": "120/80mmHg",
+      "disease": "Diabetes",
+      "allergies" : "Peanuts",
+      "appointmentsNotes": [
+          {
+              "id":1,
+              "date":"March 22,2023",
+              "title": "Diabetes Control Appointment",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Check-up",
+              "duration":"3 months",
+              "document":"check-up-result.pdf"
+          },
+          {
+              "id":2,
+              "date":"March 22,2022",
+              "title": "X-ray scanning bones",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          },
+          {
+              "id":3,
+              "date":"March 22,2022",
+              "title": "Diabetes Consultation",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          }
+      ]
+    },
+    {
+      "id": 9,
+      "fullName":"Jane Doe",
+      "address":"456 Elm st, anytown, USA",
+      "picture": "data:image/png;base64,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",
+      "appointments": 15,
+      "completedAppointments": 12,
+      "weight": "160lb",
+      "height": "1,80m",
+      "bloodType": "o- (Negative)",
+      "BloodGlucose" : "92mg/dl",
+      "bloodPressure": "120/80mmHg",
+      "disease": "Diabetes",
+      "allergies" : "Peanuts",
+      "appointmentsNotes": [
+          {
+              "id":1,
+              "date":"March 22,2023",
+              "title": "Diabetes Control Appointment",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Check-up",
+              "duration":"3 months",
+              "document":"check-up-result.pdf"
+          },
+          {
+              "id":2,
+              "date":"March 22,2022",
+              "title": "X-ray scanning bones",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          },
+          {
+              "id":3,
+              "date":"March 22,2022",
+              "title": "Diabetes Consultation",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          }
+      ]
+    },
+    {
+      "id": 10,
+      "fullName":"Jane Doe",
+      "address":"456 Elm st, anytown, USA",
+      "picture": "data:image/png;base64,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",
+      "appointments": 15,
+      "completedAppointments": 12,
+      "weight": "160lb",
+      "height": "1,80m",
+      "bloodType": "o- (Negative)",
+      "BloodGlucose" : "92mg/dl",
+      "bloodPressure": "120/80mmHg",
+      "disease": "Diabetes",
+      "allergies" : "Peanuts",
+      "appointmentsNotes": [
+          {
+              "id":1,
+              "date":"March 22,2023",
+              "title": "Diabetes Control Appointment",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Check-up",
+              "duration":"3 months",
+              "document":"check-up-result.pdf"
+          },
+          {
+              "id":2,
+              "date":"March 22,2022",
+              "title": "X-ray scanning bones",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          },
+          {
+              "id":3,
+              "date":"March 22,2022",
+              "title": "Diabetes Consultation",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          }
+      ]
+    },
+    {
+      "id": 11,
+      "fullName":"Jane Doe",
+      "address":"456 Elm st, anytown, USA",
+      "picture": "data:image/png;base64,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",
+      "appointments": 15,
+      "completedAppointments": 12,
+      "weight": "160lb",
+      "height": "1,80m",
+      "bloodType": "o- (Negative)",
+      "BloodGlucose" : "92mg/dl",
+      "bloodPressure": "120/80mmHg",
+      "disease": "Diabetes",
+      "allergies" : "Peanuts",
+      "appointmentsNotes": [
+          {
+              "id":1,
+              "date":"March 22,2023",
+              "title": "Diabetes Control Appointment",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Check-up",
+              "duration":"3 months",
+              "document":"check-up-result.pdf"
+          },
+          {
+              "id":2,
+              "date":"March 22,2022",
+              "title": "X-ray scanning bones",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          },
+          {
+              "id":3,
+              "date":"March 22,2022",
+              "title": "Diabetes Consultation",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          }
+      ]
+    },
+    {
+      "id": 12,
+      "fullName":"Jane Doe",
+      "address":"456 Elm st, anytown, USA",
+      "picture": "data:image/png;base64,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",
+      "appointments": 15,
+      "completedAppointments": 12,
+      "weight": "160lb",
+      "height": "1,80m",
+      "bloodType": "o- (Negative)",
+      "BloodGlucose" : "92mg/dl",
+      "bloodPressure": "120/80mmHg",
+      "disease": "Diabetes",
+      "allergies" : "Peanuts",
+      "appointmentsNotes": [
+          {
+              "id":1,
+              "date":"March 22,2023",
+              "title": "Diabetes Control Appointment",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Check-up",
+              "duration":"3 months",
+              "document":"check-up-result.pdf"
+          },
+          {
+              "id":2,
+              "date":"March 22,2022",
+              "title": "X-ray scanning bones",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          },
+          {
+              "id":3,
+              "date":"March 22,2022",
+              "title": "Diabetes Consultation",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          }
+      ]
+    },
+    {
+      "id": 13,
+      "fullName":"Jane Doe",
+      "address":"456 Elm st, anytown, USA",
+      "picture": "data:image/png;base64,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",
+      "appointments": 15,
+      "completedAppointments": 12,
+      "weight": "160lb",
+      "height": "1,80m",
+      "bloodType": "o- (Negative)",
+      "BloodGlucose" : "92mg/dl",
+      "bloodPressure": "120/80mmHg",
+      "disease": "Diabetes",
+      "allergies" : "Peanuts",
+      "appointmentsNotes": [
+          {
+              "id":1,
+              "date":"March 22,2023",
+              "title": "Diabetes Control Appointment",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Check-up",
+              "duration":"3 months",
+              "document":"check-up-result.pdf"
+          },
+          {
+              "id":2,
+              "date":"March 22,2022",
+              "title": "X-ray scanning bones",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          },
+          {
+              "id":3,
+              "date":"March 22,2022",
+              "title": "Diabetes Consultation",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          }
+      ]
+    },
+    {
+      "id": 14,
+      "fullName":"Jane Doe",
+      "address":"456 Elm st, anytown, USA",
+      "picture": "data:image/png;base64,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",
+      "appointments": 15,
+      "completedAppointments": 12,
+      "weight": "160lb",
+      "height": "1,80m",
+      "bloodType": "o- (Negative)",
+      "BloodGlucose" : "92mg/dl",
+      "bloodPressure": "120/80mmHg",
+      "disease": "Diabetes",
+      "allergies" : "Peanuts",
+      "appointmentsNotes": [
+          {
+              "id":1,
+              "date":"March 22,2023",
+              "title": "Diabetes Control Appointment",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Check-up",
+              "duration":"3 months",
+              "document":"check-up-result.pdf"
+          },
+          {
+              "id":2,
+              "date":"March 22,2022",
+              "title": "X-ray scanning bones",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          },
+          {
+              "id":3,
+              "date":"March 22,2022",
+              "title": "Diabetes Consultation",
+              "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi, labore consequatur consectetur consequuntur ",
+              "treatment":"Scanning",
+              "duration":"2 months",
+              "document":"X-ray-scan.pdf"
+          }
+      ]
+    }
   ]
 }

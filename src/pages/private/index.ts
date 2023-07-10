@@ -3,11 +3,16 @@ import { Profile } from "./profile/Profile";
 import { EditProfile } from "./editProfile/EditProfile";
 import { MedicalHistory } from "./medicalHistory/MedicalHistory";
 import { Home } from "./home/Home";
-
+import { PatientsList } from "./patientsList/PatientsList";
+import { PatientDetails } from "./patientDetails/PatientDetails";
+import { PatientsLayout } from "../../navigation/PatientsLayout";
 export {
     DashBoard,
     Profile,
     EditProfile,
     MedicalHistory,
-    Home
+    Home,
+    PatientsList,
+    PatientDetails,
+    PatientsLayout
 }

@@ -25,8 +25,8 @@ export const TopNav = () => {
 
   const location = useLocation();
   
-  const title = location.pathname.substr(1)
-  
+  const [title , setTitle] = useState('')
+  const [history , setHistory] = useState('')
   const currentDoctor = useAppSelector((state)=>state.doctor)
 
   const auth = getAuth();
@@ -38,13 +38,21 @@ export const TopNav = () => {
 
   useEffect(()=>{
     
-    if(title === 'EditProfile'){
+    if(location.pathname.includes("EditProfile")){
       setInProfile(true)
       setToggleSideNav(false)
+      setTitle('Edit Profile')
+      setHistory('/Profile')
+    }else if(location.pathname.includes('Patients/')){
+      setTitle('patient Details')
+      setInProfile(true)
+      setToggleSideNav(false)
+      setHistory('/Patients')
     }else{
       setInProfile(false)
+      setTitle(location.pathname.substr(1))
     }
-  },[title])
+  },[location.pathname])
 
   return (
     <section>
@@ -66,7 +74,7 @@ export const TopNav = () => {
       {/* TOP-NAV-RESPONSIVE */}
       <div className="top-nav-responsive">
         {!inProfile && <AiOutlineMenu onClick={()=>{setToggleSideNav(true)}} className="icon-responsive" />}
-        {inProfile && <NavLink to='/Profile'>
+        {inProfile && <NavLink to={history}>
               <IoMdArrowBack className="icon-responsive"/>
         </NavLink>}
         <h1 className="top-nav-title">{title}</h1>
