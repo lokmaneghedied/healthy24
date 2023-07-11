@@ -55,7 +55,7 @@ function Items({ currentItems } : any) {
             {/* APPOINTMENT */}
             <span className='pagination-container-header-appointment '>
               <h1 className='md:hidden w-[50%]'>Patient</h1>
-              <h1 className='font-medium md:font-normal md:bg-white md:w-full w-[50%]'>{item.title}</h1>
+              <h1 className='font-medium md:font-normal md:w-full w-[50%]'>{item.title}</h1>
             </span>
 
             {/* DATE */}

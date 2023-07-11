@@ -61,6 +61,7 @@
     @media (min-width: 768px){
         width:30%;
         padding: 0rem;
+        background-color:transparent;
     }
 }
 
