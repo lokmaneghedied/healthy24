@@ -6,7 +6,7 @@ import { NavLink , useNavigate } from 'react-router-dom'
 //hooks
 import { useState } from 'react';
 //apiURL
-import apiConfig from '../../../apiConfig';
+// import apiConfig from '../../../apiConfig';
 //assets
 import { cover , doctorAvatar } from '../../../assets'
 //styles
@@ -21,10 +21,10 @@ export const EditProfile = () => {
 
   const [profilePicture, setProfilePicture] = useState('');
 
-  const [err, setErr] = useState(false)
+  // const [err, setErr] = useState(false)
 
   const navigate = useNavigate();
-  const id = sessionStorage.getItem("doctorId")
+  // const id = sessionStorage.getItem("doctorId")
 
   const dispatch = useAppDispatch()
 
@@ -60,23 +60,27 @@ export const EditProfile = () => {
       profileImage : profilePicture,
       profileDescription : description,
     }
-    fetch(`${apiConfig.apiUrl1}/${id}`,{
-      method: 'PUT',
-        body: JSON.stringify(doct),
-        headers: {
-          'Content-type': 'application/json',
-        },
-    }).then((res)=>{
-      if(res.ok){
-        dispatch(
-          setCurrentDoctor(doct)
-        )
-        navigate('/Profile')
-      }
-      else{
-        setErr(true)
-      }
-    })
+    dispatch(
+      setCurrentDoctor(doct)
+    )
+    navigate('/Profile')
+    // fetch(`${apiConfig.apiUrl1}/${id}`,{
+    //   method: 'PUT',
+    //     body: JSON.stringify(doct),
+    //     headers: {
+    //       'Content-type': 'application/json',
+    //     },
+    // }).then((res)=>{
+    //   if(res.ok){
+    //     dispatch(
+    //       setCurrentDoctor(doct)
+    //     )
+    //     navigate('/Profile')
+    //   }
+    //   else{
+    //     setErr(true)
+    //   }
+    // })
   }
 
   return (
@@ -157,7 +161,7 @@ export const EditProfile = () => {
             </div>
             
             {/* ERROR MESSAGE */}
-            {err && <p className='err-msg'>Something went wrong please try again</p>}
+            {/* {err && <p className='err-msg'>Something went wrong please try again</p>} */}
             
             {/* SAVE + CANCEL */}
             <div className='editProfile-buttons'>
