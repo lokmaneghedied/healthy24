@@ -5,72 +5,120 @@
 }
 
 .medical-history-page-title{
-    font-weight: bold;
-    font-size: 1.125rem;
+    display: none;
+    @media (min-width: 1024px){
+        display:block;
+        font-weight: bold;
+        font-size: 1.125rem;
+    }
 }
 
 .pagination-container{
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    gap: 0.5rem;
-    border-radius: 0.5rem;
-    border-width: 2px;
-    border-color: #DFE8F6;
+        border-radius: 0.5rem;
+        border-width: 2px;
+        border-color: #DFE8F6;
+       
+    @media (min-width: 768px){
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        gap: 0.5rem;
+    }
 }
 
 .pagination-container-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 0.5rem;
-    color: #2A3563;
-    background-color: #EFF3FA;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    font-size: small;
+    display: none;
+    @media (min-width: 768px){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0.5rem;
+        color: #2A3563;
+        background-color: #EFF3FA;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        font-size: small;
+    }
 }
 
 .pagination-container-header-patient{
-    width:20%;
+    @media (min-width: 768px){
+        width:20%;
+    }
 }
 
 .pagination-container-header-appointment {
-    width:30%;
-}
-
-.pagination-container-header-date{
-    width:15%;
-}
-
-.pagination-container-header-time{
-    width:15%;
-}
-
-.pagination-container-header-status{
-    width:15%;
-}
-
-.pagination-container-header-action{
-    width:5%;
-}
-
-.pagination-container-list-main-div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.25rem;
-    font-size: 0.75rem;
-    border-radius: 0.5rem;
+    background-color: #EFF3FA;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    @media (min-width: 768px){
+        width:30%;
+        padding: 0rem;
+    }
+}
+
+.pagination-container-header-date{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    @media (min-width: 768px){
+        width:15%;
+        padding: 0rem;
+    }
+}
+
+.pagination-container-header-time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    @media (min-width: 768px){
+        width:15%;
+        padding: 0rem;
+    }
+}
+
+.pagination-container-header-status{
+    display: flex;
+    justify-content: center;
+    @media (min-width: 768px){     
+        width:15%;
+    }
+}
+
+.pagination-container-header-action{
+    @media (min-width: 768px){
+        width:5%;
+    }
+}
+
+.pagination-container-list-main-div {
+    padding: 0.5rem;
+    @media (min-width: 768px){     
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.25rem;
+        font-size: 0.75rem;
+        border-radius: 0.5rem;
+    }
 }
   
 .pagination-container-list-main-div:hover {
-    background-color: #f3f5f8;
-    cursor: pointer;
+    @media (min-width: 768px){
+        background-color: #f3f5f8;
+        cursor: pointer;
+    }
 }
 
 .patient-info-container{
@@ -78,8 +126,10 @@
     justify-content: flex-start;
     align-items: center;
     gap: 0.5rem;
-    width: 20%;
-    padding-right: 0.5rem;
+    @media (min-width: 768px){
+        width: 20%;
+        padding-right: 0.5rem;
+    }
 }
 
 .patient-avatar{
@@ -130,27 +180,39 @@
 }
 
 .pagination-icon-class{
+    display:none;
+    @media (min-width: 768px){
+        display:block;
+        width:15px;
+        height:15px;
+        cursor: pointer;
+    }
+}
+
+.pagination-CloseIcon-class{
     width:15px;
     height:15px;
     cursor: pointer;
 }
 
 .patient-details-info-container{
-    background-color: #fff;
     position: absolute;
-    top: -1px;
+    top: 0;
     right: 0;
-    height: 100vh;
-    width: 450px;
+    background-color: #fff;
     z-index: 20;
     overflow-y: auto;
+    height: 100vh;
+    @media (min-width: 768px){
+        width: 450px;
+    }
 }
 
 .black-background{
     position: absolute;
     height: 100vh;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     top: 0;
     left: 0;
 }

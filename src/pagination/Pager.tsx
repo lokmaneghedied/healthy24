@@ -24,7 +24,7 @@ function Items({ currentItems } : any) {
   }
 
   return (
-    <div className="pagination-container">
+    <div className="pagination-container divide-y md:divide-y-0">
        
        {/* LIST-HEADER */}
        <div className="pagination-container-header">
@@ -53,13 +53,22 @@ function Items({ currentItems } : any) {
             </div>
             
             {/* APPOINTMENT */}
-            <h1 className='pagination-container-header-appointment'>{item.title}</h1>
-            
-            {/* DATA */}
-            <h1 className='pagination-container-header-date'>{item.date}</h1>
+            <span className='pagination-container-header-appointment '>
+              <h1 className='md:hidden w-[50%]'>Patient</h1>
+              <h1 className='font-medium md:font-normal md:bg-white md:w-full w-[50%]'>{item.title}</h1>
+            </span>
+
+            {/* DATE */}
+            <span className='pagination-container-header-date'>
+              <h1 className='md:hidden'>Date</h1>
+              <h1>{item.date}</h1>
+            </span>
             
             {/* TIME */}
-            <h1 className='pagination-container-header-time'>{item.time}</h1>
+            <span className='pagination-container-header-time'>
+              <h1 className='md:hidden'>Time</h1>
+              <h1 >{item.time}</h1>
+            </span>
             
             {/* STATUS */}
             <div className='pagination-container-header-status'>
@@ -85,7 +94,7 @@ function Items({ currentItems } : any) {
           {/* PATIENT-INFO-HEADER */}
           <div className='patient-details-info-header'>
             <h1 className='patient-details-info-header-title'>Medical History</h1>
-            <AiOutlineClose className='pagination-icon-class' onClick={()=>setPatientInfo(false)}/>
+            <AiOutlineClose className='pagination-CloseIcon-class' onClick={()=>setPatientInfo(false)}/>
           </div>
 
           {/* PATIENT-INFO-PROFILE */}

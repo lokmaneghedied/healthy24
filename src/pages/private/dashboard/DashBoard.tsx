@@ -78,63 +78,6 @@ export const DashBoard = () => {
           {/* LIST */}
           <PaginatedItems itemsPerPage={2}/>
         </div>
-
-        {/* MEDICAL_HISTORY_responsive */}
-        <div className='dashboard_medical_history_resp'>
-        {patients.map((patient)=>{if(patient.id < 3){
-          return (
-            <div key={patient.id}>
-              <h1 className='dashboard_medical_history_resp_title'>Medical History</h1>
-              {/* PROFILE_INFO */}
-              <div className='dashboard_medical_history_resp_profile_div'>
-
-                {/* PROFILE_PICTURE + NAME + LOCATION */}
-                <div className='dashboard_medical_history_resp_profile_info'>
-                  <img className='patient-avatar' src={patient.icon} alt="" />
-                  <span>
-                    <h1 className='dashboard_medical_history_resp_profile_info_title'>{patient.patient}</h1>
-                    <p className='text-gray'>{patient.location}</p>
-                  </span>
-                </div>
-                
-                {/* STATUS */}
-                <p className={patient.status === 'Success' ? 'SuccessClass' : patient.status === 'Pending' ? 'PendingClass' : 'CanceledClass'} >{patient.status}</p>
-              </div>
-
-              {/* APPOINTMENT-TITLE */}
-              <div className='dashboard_medical_history_resp_appointment'>
-                <p>patient</p>
-                <p>{patient.title}</p>
-              </div>
-
-              {/* APPOINTMET-DATE */}
-              <div className='dashboard_medical_history_resp_title'>
-                <p>Date</p>
-                <p>{patient.date}</p>
-              </div>
-              
-              {/* APPOINTMET-TIME */}
-              <div className='dashboard_medical_history_resp_title'>
-                <p>Time</p>
-                <p>{patient.time}</p>
-              </div>
-              
-              {/* PAYMENT_TOTAL*/}
-               <div className='dashboard_medical_history_resp_appointment'>
-                <p>Total</p>
-                <p>${patient.medicine + patient.medicalCheckUp}</p>
-              </div>
-
-              {/* PAY WITH */}
-              <div className='dashboard_medical_history_resp_title'>
-                <p>pay from</p>
-                <p>{patient.payFrom}</p>
-              </div>
-
-            </div>
-          )}})}
-        </div>
-
       </div>
     </section>
   )

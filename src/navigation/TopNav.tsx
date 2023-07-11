@@ -48,6 +48,9 @@ export const TopNav = () => {
       setInProfile(true)
       setToggleSideNav(false)
       setHistory('/Patients')
+    }else if(location.pathname.includes('Medicalhistory')){
+      setTitle('Medical History')
+      setInProfile(false)
     }else{
       setInProfile(false)
       setTitle(location.pathname.substr(1))
