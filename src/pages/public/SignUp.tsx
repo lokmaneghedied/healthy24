@@ -41,6 +41,10 @@ export const SignUp = () => {
   
   const navigate = useNavigate();
 
+  const signIn = ()=>{
+    navigate('/healthy24')
+  }
+
   const formik = useFormik({
     initialValues:{
         fullName:'',
@@ -191,7 +195,7 @@ export const SignUp = () => {
         </button>
 
         <h1 className="minTitle"> You Already have account ? 
-          <NavLink className='link' to='healthy24' > Sign in</NavLink>
+          <button className='link' onClick={signIn}> Sign in</button>
         </h1>
 
       </div>
