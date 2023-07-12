@@ -14,7 +14,7 @@ import './index.css'
 import { BsGoogle , BsFacebook } from "react-icons/bs";
 import { AiFillEye , AiFillEyeInvisible } from "react-icons/ai";
 //apiURL
-import apiConfig from "../../apiConfig";
+// import apiConfig from "../../apiConfig";
 
 interface Doctor {
   id  : string,
@@ -58,21 +58,25 @@ export const SignUp = () => {
             profileDescription : "your profile description",
             profileImage : ""
           }
-          fetch(`${apiConfig.apiUrl1}`,{
-            method : 'POST',
-            headers : {'Content-type':'application/json'} ,
-            body: JSON.stringify(newDoctor)
-          }).then((res)=>{
-            if(res.ok){
-                setErr('')
-                sessionStorage.setItem("doctorId", UserCredential.user.uid)
-                navigate('/Dashboard')
-            }else{
-              setErr('something went wrong, please try again')
-            }
-          }).catch(()=>{
-            setErr('account created, failed to logIn ')
-          })
+          // fetch(`${apiConfig.apiUrl1}`,{
+          //   method : 'POST',
+          //   headers : {'Content-type':'application/json'} ,
+          //   body: JSON.stringify(newDoctor)
+          // }).then((res)=>{
+          //   if(res.ok){
+          //       setErr('')
+          //       sessionStorage.setItem("doctorId", UserCredential.user.uid)
+          //       navigate('/Dashboard')
+          //   }else{
+          //     setErr('something went wrong, please try again')
+          //   }
+          // }).catch(()=>{
+          //   setErr('account created, failed to logIn ')
+          // })
+
+          sessionStorage.setItem("doctorId", UserCredential.user.uid)
+          navigate('/Dashboard')
+
         }).catch((error)=>{
           setErr(error.code)
         })
@@ -187,7 +191,7 @@ export const SignUp = () => {
         </button>
 
         <h1 className="minTitle"> You Already have account ? 
-          <NavLink className='link' to='/' > Sign in</NavLink>
+          <NavLink className='link' to='healthy24' > Sign in</NavLink>
         </h1>
 
       </div>

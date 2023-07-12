@@ -40,7 +40,7 @@ export const SignIn = () => {
       signInWithEmailAndPassword(auth, values.email, values.password)
         .then((UserCredential)=>{
           sessionStorage.setItem("doctorId", UserCredential.user.uid)
-            navigate('/Dashboard')
+          navigate('/Dashboard')
         })
         .catch((error)=>{
             setErr(error.code)

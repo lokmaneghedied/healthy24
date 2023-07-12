@@ -17,7 +17,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       {/* PUBLIC ROUTES */}
-        <Route path="/" element={<SignIn />} />
+        <Route path="healthy24" element={<SignIn />} />
         <Route path="signup" element={<SignUp />} />
         <Route path="resetpassword" >
           <Route index element={<ResetPassword />} />
