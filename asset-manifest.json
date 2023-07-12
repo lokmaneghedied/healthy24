@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/healthy24/static/css/main.ae6da4f5.css",
-    "main.js": "/healthy24/static/js/main.88e26937.js",
+    "main.js": "/healthy24/static/js/main.58dea943.js",
     "static/media/logIn.png": "/healthy24/static/media/logIn.19e42ec820836da31f3b.png",
     "static/media/cover.png": "/healthy24/static/media/cover.8469cfeaca409bdb7252.png",
     "static/media/doctorAvatar.png": "/healthy24/static/media/doctorAvatar.1bade632c8017d866b70.png",
     "index.html": "/healthy24/index.html",
     "main.ae6da4f5.css.map": "/healthy24/static/css/main.ae6da4f5.css.map",
-    "main.88e26937.js.map": "/healthy24/static/js/main.88e26937.js.map"
+    "main.58dea943.js.map": "/healthy24/static/js/main.58dea943.js.map"
   },
   "entrypoints": [
     "static/css/main.ae6da4f5.css",
-    "static/js/main.88e26937.js"
+    "static/js/main.58dea943.js"
   ]
 }
