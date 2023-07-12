@@ -63,7 +63,7 @@ export const EditProfile = () => {
     dispatch(
       setCurrentDoctor(doct)
     )
-    navigate('/healthy24/Profile')
+    navigate('/Profile')
     // fetch(`${apiConfig.apiUrl1}/${id}`,{
     //   method: 'PUT',
     //     body: JSON.stringify(doct),
@@ -165,7 +165,7 @@ export const EditProfile = () => {
             
             {/* SAVE + CANCEL */}
             <div className='editProfile-buttons'>
-              <NavLink className='white_btn' to='/healthy24/Profile'>Cancel</NavLink>
+              <NavLink className='white_btn' to='/Profile'>Cancel</NavLink>
               <button className='btn'>Save changes</button>
             </div>
         </form>
