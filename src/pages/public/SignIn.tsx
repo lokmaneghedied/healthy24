@@ -40,7 +40,7 @@ export const SignIn = () => {
       signInWithEmailAndPassword(auth, values.email, values.password)
         .then((UserCredential)=>{
           sessionStorage.setItem("doctorId", UserCredential.user.uid)
-          navigate('/Dashboard')
+          navigate('/healthy24/Dashboard')
         })
         .catch((error)=>{
             setErr(error.code)
@@ -121,7 +121,7 @@ export const SignIn = () => {
                 </div>
             </div>
             <div>
-              <NavLink className="resetpassword" to='/resetpassword'>Forget password</NavLink>
+              <NavLink className="resetpassword" to='/healthy24/resetpassword'>Forget password</NavLink>
             </div>
           </div>
 
@@ -144,7 +144,7 @@ export const SignIn = () => {
         </button>
 
         <h1 className="minTitle"> You don't have an account ? 
-          <NavLink className='link' to='/signup' > Sign Up</NavLink>
+          <NavLink className='link' to='/healthy24/signup' > Sign Up</NavLink>
         </h1>
 
       </div>

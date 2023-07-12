@@ -9,7 +9,7 @@ export const ErrorPage = () => {
     <section className="error-page">
         <h1 className="error-page-title">Error</h1>
         <p>{err.message}</p>
-        <NavLink className='error-page-link' to='/'> Back To LogIn page </NavLink>
+        <NavLink className='error-page-link' to='/healthy24'> Back To LogIn page </NavLink>
     </section>
   )
 }

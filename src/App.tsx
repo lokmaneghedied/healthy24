@@ -18,15 +18,15 @@ const router = createBrowserRouter(
     <Route>
       {/* PUBLIC ROUTES */}
         <Route path="healthy24" element={<SignIn />} />
-        <Route path="signup" element={<SignUp />} />
-        <Route path="resetpassword" >
+        <Route path="healthy24/signup" element={<SignUp />} />
+        <Route path="healthy24/resetpassword" >
           <Route index element={<ResetPassword />} />
           <Route path="otpverification/:email" element={<OtpVerification />} />
         </Route>
 
         {/* PRIVATE ROUTES */}
         <Route 
-          path="/" 
+          path="healthy24" 
           element={<AuthRoute > <Home /> </AuthRoute> } >
           <Route path="Dashboard" element={<DashBoard />} />
           <Route path="Profile" element={<Profile />} />

@@ -18,7 +18,7 @@ const AuthRoute: React.FunctionComponent<IAuthRouteProps> = (props) => {
             if (user) {
                 setLoading(false);
             } else {
-                navigate('healthy24');
+                navigate('/healthy24');
             }
         });
 

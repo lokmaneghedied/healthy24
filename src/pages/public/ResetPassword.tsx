@@ -21,7 +21,7 @@ export const ResetPassword = () => {
         email:'',
     },
     onSubmit : values  =>{
-      navigate(`otpverification/${values.email}`)
+      navigate(`/healthy24/resetpassword/otpverification/${values.email}`)
     },
 
     validate : values =>{

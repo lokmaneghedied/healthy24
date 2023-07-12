@@ -41,7 +41,7 @@ export const Profile = () => {
               <NavLink to='/EditProfile'>
                 <CiEdit className='edit-icon'/>
               </NavLink>
-              <NavLink className='edit-link' to='/EditProfile'>Edit profile</NavLink>
+              <NavLink className='edit-link' to='/healthy24/EditProfile'>Edit profile</NavLink>
             </span>
           </div>
           

@@ -79,7 +79,7 @@ export const SignUp = () => {
           // })
 
           sessionStorage.setItem("doctorId", UserCredential.user.uid)
-          navigate('/Dashboard')
+          navigate('/healthy24/Dashboard')
 
         }).catch((error)=>{
           setErr(error.code)
